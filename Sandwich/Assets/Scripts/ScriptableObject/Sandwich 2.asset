@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20850e338e767e844851dca75b19aa87, type: 3}
-  m_Name: Vegan 1
+  m_Name: Sandwich 2
   m_EditorClassIdentifier: 
-  nameText: Vegetarian
-  icon: {fileID: 21300000, guid: 7a3ac5ba07c442c438dfcb7e7468ef57, type: 3}
-  ingredient: 010000000300000005000000
+  nameText: 
+  icon: {fileID: 0}
+  ingredient: 

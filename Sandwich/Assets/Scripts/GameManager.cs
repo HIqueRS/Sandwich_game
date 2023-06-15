@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     public SO_Sandwich currentSandwich;
 
+    public int points;
+
     private void Awake()
     {
         Instance = this;
