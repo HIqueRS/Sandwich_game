@@ -6,7 +6,7 @@ using Configurations;
 public class Ingredient : MonoBehaviour
 {
 
-    public enumIngridient nameI;
+    public EnumIngridient nameI;
 
     private void OnEnable()
     {

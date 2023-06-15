@@ -46,25 +46,25 @@ public class SandwichDisplay : MonoBehaviour
         {
             switch (_sandwich.ingredient[i])
             {
-                case enumIngridient.BreadTop:
+                case EnumIngridient.BreadTop:
                     break;
-                case enumIngridient.Cheese: 
+                case EnumIngridient.Cheese: 
                     _ingredients[i].text = "Cheese";
 
                     break;
-                case enumIngridient.Hamburguer:
+                case EnumIngridient.Hamburguer:
                     _ingredients[i].text = "Hamburguer";
 
                     break;
-                case enumIngridient.Lettuce:
+                case EnumIngridient.Lettuce:
                     _ingredients[i].text = "Lettuce";
 
                     break;
-                case enumIngridient.Pickle:
+                case EnumIngridient.Pickle:
                     _ingredients[i].text = "Pickle";
 
                     break;
-                case enumIngridient.Tomato:
+                case EnumIngridient.Tomato:
                     _ingredients[i].text = "Tomato";
 
                     break;

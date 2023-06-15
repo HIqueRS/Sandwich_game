@@ -5,16 +5,19 @@ using Configurations;
 
 public class BaseBread : MonoBehaviour
 {
-    //[SerializeField]
-    //private bool[] _ingredient;
+   
+    
 
-    private List<enumIngridient> _ingredients;
-    private List<enumIngridient> _orderIngredient;
+    private List<EnumIngridient> _ingredients;
+    private List<EnumIngridient> _orderIngredient;
 
     // Start is called before the first frame update
     void Start()
     {
         //_ingredient = new bool[6];
+
+        _ingredients = new List<EnumIngridient>();
+        _orderIngredient = new List<EnumIngridient>();
     }
 
     // Update is called once per frame
@@ -29,12 +32,20 @@ public class BaseBread : MonoBehaviour
         {
             GameObject gameobj;
             Ingredient colided;
-            int i;
+            
 
             gameobj = collision.transform.gameObject;
             colided = gameobj.GetComponent<Ingredient>();
-            i = (int)colided.nameI;
 
+            if(colided.nameI != EnumIngridient.BreadTop)
+            {
+                _ingredients.Add(colided.nameI);
+            }
+            else
+            {
+                TestEnd();
+            }
+           
             
         }
     }
@@ -47,13 +58,13 @@ public class BaseBread : MonoBehaviour
         {
             GameObject gameobj;
             Ingredient colided;
-            int i;
+           
 
             gameobj = collision.transform.gameObject;
             colided = gameobj.GetComponent<Ingredient>();
-            i = (int)colided.nameI;
 
-            
+
+            _ingredients.Remove(colided.nameI);
 
            
         }
@@ -63,10 +74,37 @@ public class BaseBread : MonoBehaviour
     private void TestEnd()
     {
         int points;
-        int i = 0;
+       
 
         points = 10;
-        
+
+        _orderIngredient.Clear();
+
+        foreach (EnumIngridient item in GameManager.Instance.currentSandwich.ingredient)
+        {
+            _orderIngredient.Add(item);
+        }
+
+        for (int i = 0; i < _ingredients.Count; i++)
+        {
+            if(_orderIngredient.Contains(_ingredients[i]))
+            {
+                _orderIngredient.Remove(_ingredients[i]);
+
+                points += 30;
+            }
+            else
+            {
+                points -= 30;
+            }
+            
+        }
+
+        foreach (EnumIngridient item in _orderIngredient)
+        {
+            points -= 30;
+        }
+
 
         Debug.Log(points);
 

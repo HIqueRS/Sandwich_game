@@ -10,5 +10,5 @@ public class SO_Sandwich : ScriptableObject
     public string nameText;
     public Sprite icon;
      
-    public enumIngridient[] ingredient;
+    public EnumIngridient[] ingredient;
 }
