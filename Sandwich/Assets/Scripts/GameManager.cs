@@ -44,6 +44,9 @@ public class GameManager : MonoBehaviour
 
     public void RestStateFunction()
     {
+        RandomSandwich();
+
         ResetState?.Invoke();
+        
     }
 }

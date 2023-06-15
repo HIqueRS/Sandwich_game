@@ -11,6 +11,8 @@ public class BaseBread : MonoBehaviour
     private List<EnumIngridient> _ingredients;
     private List<EnumIngridient> _orderIngredient;
 
+    private int points;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,7 +75,7 @@ public class BaseBread : MonoBehaviour
 
     private void TestEnd()
     {
-        int points;
+        
        
 
         points = 10;
@@ -105,8 +107,16 @@ public class BaseBread : MonoBehaviour
             points -= 30;
         }
 
+        StartCoroutine(EndSandwich());
+        
+       
 
-        Debug.Log(points);
+    }
 
+    IEnumerator EndSandwich()
+    {
+        yield return new WaitForSeconds(1);
+        GameManager.Instance.points += points;
+        GameManager.Instance.RestStateFunction();
     }
 }

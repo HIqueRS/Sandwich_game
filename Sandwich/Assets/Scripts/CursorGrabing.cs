@@ -111,7 +111,7 @@ public class CursorGrabing : MonoBehaviour
     {
         RaycastHit2D hit;
 
-        hit = Physics2D.Raycast(_newPosition, _newPosition);
+        hit = Physics2D.Raycast(_newPosition, Vector3.up,1f);
 
         if (hit)
         {

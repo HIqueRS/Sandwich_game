@@ -20,11 +20,29 @@ public class SandwichDisplay : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI[] _ingredients;
 
+    [SerializeField]
+    private TextMeshProUGUI _score;
+
+
+    private void OnEnable()
+    {
+        GameManager.ResetState += ChangeDisplay;
+        GameManager.ResetState += ChangeScore;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.ResetState -= ChangeDisplay;
+        GameManager.ResetState -= ChangeScore;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        _canChange = false;
+        _canChange = true;
     }
+
+    
 
     // Update is called once per frame
     void Update()
@@ -32,7 +50,13 @@ public class SandwichDisplay : MonoBehaviour
         if(_canChange)
         {
             ChangeDisplay();
+            _canChange = false;
         }
+    }
+
+    void ChangeScore()
+    {
+        _score.text = "Score:" + GameManager.Instance.points;
     }
 
     void ChangeDisplay()
