@@ -7,34 +7,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 407808003821015550, guid: f41b6a30f9112e443983f20b768e8672, type: 3}
+      propertyPath: Name
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 407808003821015550, guid: f41b6a30f9112e443983f20b768e8672, type: 3}
+      propertyPath: nameI
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 445298542687084431, guid: f41b6a30f9112e443983f20b768e8672, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 3.64
+      value: 3.03
       objectReference: {fileID: 0}
     - target: {fileID: 445298542687084431, guid: f41b6a30f9112e443983f20b768e8672, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.93
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 1455118197634617239, guid: f41b6a30f9112e443983f20b768e8672, type: 3}
       propertyPath: m_Size.x
-      value: 3.000001
+      value: 3.0000024
       objectReference: {fileID: 0}
     - target: {fileID: 1455118197634617239, guid: f41b6a30f9112e443983f20b768e8672, type: 3}
       propertyPath: m_Size.y
-      value: 0.60474783
+      value: 0.27153045
       objectReference: {fileID: 0}
     - target: {fileID: 1455118197634617239, guid: f41b6a30f9112e443983f20b768e8672, type: 3}
       propertyPath: m_Offset.x
-      value: 0.000000035479815
+      value: 0.00000005346361
       objectReference: {fileID: 0}
     - target: {fileID: 1455118197634617239, guid: f41b6a30f9112e443983f20b768e8672, type: 3}
       propertyPath: m_Offset.y
-      value: -0.7023739
+      value: -0.5515149
       objectReference: {fileID: 0}
     - target: {fileID: 6775122455650394802, guid: f41b6a30f9112e443983f20b768e8672, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 569e024a6c3ebfc44a9acfa237d7ba10, type: 3}
+      objectReference: {fileID: 21300000, guid: 4ef9094a9422acc478b4a3a0ed40ae1f, type: 3}
     - target: {fileID: 7588239151432232534, guid: f41b6a30f9112e443983f20b768e8672, type: 3}
       propertyPath: m_Name
       value: PF_Tomato

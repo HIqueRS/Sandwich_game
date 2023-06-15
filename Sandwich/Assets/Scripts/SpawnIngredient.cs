@@ -10,8 +10,18 @@ public class SpawnIngredient : MonoBehaviour
     private GameObject[] _ingredients;
     private int[] _ingredientsNumber;
     [SerializeField]
-    private GameObject _position; 
+    private GameObject _position;
 
+    private void OnEnable()
+    {
+        GameManager.ResetState += ResetCounter;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.ResetState -= ResetCounter;
+        
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -37,5 +47,13 @@ public class SpawnIngredient : MonoBehaviour
             _ingredientsNumber[i]++;
         }
         
+    }
+
+    public void ResetCounter()
+    {
+        for (int i = 0; i < _ingredientsNumber.Length; i++)
+        {
+            _ingredientsNumber[i] = 0;
+        }
     }
 }

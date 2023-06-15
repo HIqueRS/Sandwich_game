@@ -29,11 +29,21 @@ public class CursorGrabing : MonoBehaviour
             {
                 _ingredient.GetComponent<Rigidbody2D>().isKinematic = true;
                 _ingredient.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                _ingredient.GetComponent<Rigidbody2D>().angularVelocity = 0;
 
                 _newPosition = new Vector3(_newPosition.x, _newPosition.y, 0);
 
                 _ingredient.transform.position += (_newPosition - _ingredient.transform.position) * Time.deltaTime * 10;
-                // _ingredient.transform.position = new Vector3(_newPosition.x, _newPosition.y, -2);
+
+                if(Input.GetKey(KeyCode.E))
+                {
+                    
+                    _ingredient.transform.Rotate(Vector3.forward, -10f * Time.deltaTime * 15) ;
+                }
+                if (Input.GetKey(KeyCode.Q))
+                {
+                    _ingredient.transform.Rotate(Vector3.forward, 10f * Time.deltaTime * 15);
+                }
             }
         }
         else
@@ -41,6 +51,7 @@ public class CursorGrabing : MonoBehaviour
             if (_ingredient != null)
             {
                 _ingredient.GetComponent<Rigidbody2D>().isKinematic = false;
+                //_ingredient.GetComponent<Rigidbody2D>().freezeRotation = false;
                 _ingredient = null;
             }
         }

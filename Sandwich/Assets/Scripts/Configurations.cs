@@ -4,5 +4,5 @@ using UnityEngine;
 
 namespace Configurations 
 {
-    public enum Ingredients { BreadTop, Cheese, Hamburguer, Lettuce, Pickle, Tomato }
+    public enum enumIngridient { BreadTop, Cheese, Hamburguer, Lettuce, Pickle, Tomato }
 }
