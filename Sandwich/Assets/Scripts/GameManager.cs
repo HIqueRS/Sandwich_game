@@ -12,12 +12,18 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public static event Action ResetState;
+    public static event Action EndGame;
 
     public SO_Sandwich[] sandwiches;
 
     public SO_Sandwich currentSandwich;
 
     public int points;
+    public int endPoints;
+
+    public float timer;
+
+    private bool _end;
 
     private void Awake()
     {
@@ -28,12 +34,31 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         RandomSandwich();
+        _end = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        PassTime();
+    }
+
+    private void PassTime()
+    {
+        if(timer > 0)
+        {
+            timer -= Time.deltaTime;
+        }
+        else
+        {
+            timer = 0;
+            if(!_end)
+            {
+                endPoints = points;
+                EndGame?.Invoke();
+                _end = true;
+            }
+        }
     }
 
     private void RandomSandwich()

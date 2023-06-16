@@ -23,6 +23,9 @@ public class SandwichDisplay : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _score;
 
+    [SerializeField]
+    private TextMeshProUGUI _timerText;
+   
 
     private void OnEnable()
     {
@@ -40,6 +43,8 @@ public class SandwichDisplay : MonoBehaviour
     void Start()
     {
         _canChange = true;
+
+       
     }
 
     
@@ -52,11 +57,19 @@ public class SandwichDisplay : MonoBehaviour
             ChangeDisplay();
             _canChange = false;
         }
+
+
+        ChangeTimer();
+    }
+
+    void ChangeTimer()
+    {
+        _timerText.text = GameManager.Instance.timer.ToString("0");
     }
 
     void ChangeScore()
     {
-        _score.text = "Score:" + GameManager.Instance.points;
+        _score.text = string.Concat( "Score:" ,GameManager.Instance.points);
     }
 
     void ChangeDisplay()
