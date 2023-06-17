@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Vegan
   m_EditorClassIdentifier: 
   nameText: Vegan
-  icon: {fileID: 21300000, guid: 3e7d15f583309eb448dc6fdc5b4679d6, type: 3}
+  icon: {fileID: 21300000, guid: b55129571f653be4f8a82054345d0802, type: 3}
   ingredient: 040000000300000005000000

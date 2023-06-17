@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     public static event Action ResetState;
     public static event Action EndGame;
+    public static event Action GamePause;
+    public static event Action GameStart;
 
     public SO_Sandwich[] sandwiches;
 
@@ -25,6 +27,8 @@ public class GameManager : MonoBehaviour
 
     private bool _end;
 
+    private bool _start;
+
     private void Awake()
     {
         Instance = this;
@@ -35,12 +39,16 @@ public class GameManager : MonoBehaviour
     {
         RandomSandwich();
         _end = false;
+        _start = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        PassTime();
+        if(_start)
+        {
+            PassTime();
+        }
     }
 
     private void PassTime()
@@ -73,5 +81,11 @@ public class GameManager : MonoBehaviour
 
         ResetState?.Invoke();
         
+    }
+
+    public void StartGame()
+    {
+        GameStart?.Invoke();
+        _start = true;
     }
 }

@@ -34,6 +34,7 @@ public class EndPanel : MonoBehaviour
     private void TurnOnChild()
     {
         transform.GetChild(0).gameObject.SetActive(true);
+        _ScoreText.text = string.Concat("Score:", GameManager.Instance.endPoints.ToString());
     }
 
 

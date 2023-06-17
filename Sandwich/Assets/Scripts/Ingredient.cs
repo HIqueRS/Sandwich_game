@@ -11,11 +11,14 @@ public class Ingredient : MonoBehaviour
     private void OnEnable()
     {
         GameManager.ResetState += ResetPosition;
+        GameManager.EndGame += ResetPosition;
     }
 
     private void OnDisable()
     {
         GameManager.ResetState -= ResetPosition;
+        GameManager.EndGame -= ResetPosition;
+
     }
 
     // Start is called before the first frame update

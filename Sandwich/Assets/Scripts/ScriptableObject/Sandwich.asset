@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Sandwich
   m_EditorClassIdentifier: 
   nameText: CheeseBurguer
-  icon: {fileID: 21300000, guid: 3e7d15f583309eb448dc6fdc5b4679d6, type: 3}
+  icon: {fileID: 21300000, guid: ed1a3f4a77c3d57418d29becfecb9b6e, type: 3}
   ingredient: 010000000200000003000000

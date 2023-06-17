@@ -116,6 +116,7 @@ public class BaseBread : MonoBehaviour
     IEnumerator EndSandwich()
     {
         yield return new WaitForSeconds(1);
+        _ingredients.Clear();
         GameManager.Instance.points += points;
         GameManager.Instance.RestStateFunction();
     }

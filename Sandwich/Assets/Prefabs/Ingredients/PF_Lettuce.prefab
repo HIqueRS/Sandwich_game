@@ -17,11 +17,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445298542687084431, guid: f41b6a30f9112e443983f20b768e8672, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 3.85
+      value: 3.76
       objectReference: {fileID: 0}
     - target: {fileID: 445298542687084431, guid: f41b6a30f9112e443983f20b768e8672, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.85
+      value: 1.78
       objectReference: {fileID: 0}
     - target: {fileID: 1455118197634617239, guid: f41b6a30f9112e443983f20b768e8672, type: 3}
       propertyPath: m_Size.x
@@ -42,7 +42,7 @@ PrefabInstance:
     - target: {fileID: 6775122455650394802, guid: f41b6a30f9112e443983f20b768e8672, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 12264b5bbd84d5e4e8b9dbc6fa50d19f, type: 3}
+      objectReference: {fileID: 21300000, guid: 79031965905a40a4387b1d3c03a0a036, type: 3}
     - target: {fileID: 7588239151432232534, guid: f41b6a30f9112e443983f20b768e8672, type: 3}
       propertyPath: m_Name
       value: PF_Lettuce
